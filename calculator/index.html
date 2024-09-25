@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using DOM</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" id="result"  readonly>
+                </div>
+                <div>
+                    <button type="button" value="C" onclick="display.value =''" id="clear">C</button>
+                    <button type="button" value="⌫" onclick="display.value = display.value.toString().slice(0,-1)" >⌫</button>
+                    <button type="button" value="." onclick="display.value +='.'" class="operator">.</button>
+                    <button type="button" value="*" onclick="display.value +='*'" class="operator">*</button>
+                </div>
+                <div>
+                    <button type="button" value="7" onclick="appendToDisplay('7')">7</button>
+                    <button type="button" value="8" onclick="appendToDisplay('8')">8</button>
+                    <button type="button" value="9" onclick="appendToDisplay('9')">9</button>
+                    <button type="button" value="/" onclick="display.value +='/'" class="operator">/</button>
+                </div>
+                <div>
+                    <button type="button" value="4" onclick="appendToDisplay('4')">4</button>
+                    <button type="button" value="5" onclick="appendToDisplay('5')">5</button>
+                    <button type="button" value="6" onclick="appendToDisplay('6')">6</button>
+                    <button type="button" value="-" onclick="display.value +='-'" class="operator" id="subtract"></button>
+                </div>
+                <div>
+                    <button type="button" value="1" onclick="appendToDisplay('1')" id="1">1</button>
+                    <button type="button" value="2" onclick="appendToDisplay('2')" id="2">2</button>
+                    <button type="button" value="3" onclick="appendToDisplay('3')" id="3">3</button>
+                    <button type="button" value="+" onclick="display.value +='+'" class="operator" id="add"></button>
+                </div>
+                <div>
+                    <button type="button" value="0" onclick="display.value +='0'">0</button>
+                    <button type="button" value="00" onclick="display.value +='00'">00</button>
+                    <button type="button" value="=" onclick="_result()" id="equal">=</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>

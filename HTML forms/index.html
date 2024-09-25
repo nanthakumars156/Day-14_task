@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <div class="container">
+        <form id="form">
+            <div class="form-group">First name<input type="text" placeholder="Enter your First name" id="first-name" required></div>
+            <div class="form-group">Last name<input type="text" placeholder="Enter your Last name" id="last-name" required></div>
+            <div class="form-group">Email<input type="email" placeholder="Enter your email" id="email" required></div>
+            <div class="form-group">Address<br><textarea name="textarea" placeholder="Enter your Address" id="address" required></textarea></div>
+            <div class="form-group">Pincode<input type="text" placeholder="Enter your Pincode" id="pincode" required></div><br>
+            <div class="form-group "id="gender"><label>Gender</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="others" name="gender" value="Others">
+                <label for="others">Others</label>
+            </div><br> 
+            <div class="form-group">Choice of Food
+                <select name="Food" id="food" >
+                    <option value="">-Option 1-</option>
+                    <option value="DOSA">DOSA</option>
+                    <option value="IDLY">IDLY</option>
+                    <option value="PONGAL">PONGAL</option>
+                    <option value="POORI">POORI</option>
+                    <option value="VADA">VADA</option>
+                </select><br></div>
+            <div class="form-group">State<input type="text" placeholder="Enter your State" id="state" required></div>
+            <div class="form-group">Country<input type="text" placeholder="Enter your Country" id="country" required></div><br>
+            <div style="display: flex;justify-content: center;"><button class="btn btn-primary form-group" type="submit" id="submit">Submit</button>
+        </form>
+    </div>    
+    <div class="t">
+<table class="table">
+<thead>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Pincode</th>
+        <th>Gender</th>
+        <th>Choice Of Food</th>
+        <th>State</th>
+        <th>Country</th>
+    </tr>
+</thead><br><br>
+    <tbody>
+      <tr id="table_body">
+
+      </tr>
+    </tbody>
+</table>
+</div>
+      <script src="./script.js"></script>
+      <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
